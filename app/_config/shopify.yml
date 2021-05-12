@@ -6,7 +6,7 @@ Swordfox\Shopify\Client:
   storefront_access_token: 'bac10ed49f115f9ef2900fd51d77783f' # for buybutton code
   shopify_domain: 'emmas-sandbox-store.myshopify.com' # mydomain.myshopify.com
   shared_secret: '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'
-  webhooks_shared_secret: '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' # Use same as above for webhooks added via API e.g. dev/tasks/Sword
+  webhooks_shared_secret: '562ebc8f9b8ae9ba61f518a392bb6ab7ad55ed8d69033ec5f41c1e062fd4e198' # Use same as above for webhooks added via API e.g. dev/tasks/Sword
   webhooks_create:
     'products/update': 'shop/webhook/update/product'
     'products/create': 'shop/webhook/update/product'
