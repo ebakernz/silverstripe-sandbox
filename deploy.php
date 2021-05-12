@@ -5,7 +5,7 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Config
-// set('repository', 'git@github.com:PlasticStudio/skeletor.git');
+set('repository', 'git@github.com:ebakernz/silverstripe-sandbox.git');
 set('default_stage', 'staging');
 set('ssh_multiplexing', true);
 set('writable_mode', 'chmod');
@@ -18,12 +18,12 @@ set('local_assets_path', '/var/www/html/public/assets/');
 set('keep_releases', 5);
 
 //Staging
-// host('skeletor.shuat.plasticstudio.co')
-	->user('skeletoruser')
+host('shopify-silverstripe-sandbox.shuat.plasticstudio.co')
+	->user('uatshopssuser')
 	->stage('staging')
 	->roles('app')
-	->set('http_user', 'skeletoruser')
-	->set('remote_user', 'skeletoruser');
+	->set('http_user', 'uatshopssuser')
+	->set('remote_user', 'uatshopssuser');
 
 //Production
 // host('skeletor.shuat.plasticstudio.co')
