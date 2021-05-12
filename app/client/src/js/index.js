@@ -4,6 +4,8 @@
 // compiles into the necessary css files
 import style from '../scss/index.scss';
 
+
 // Inject our components
 require('./components/responsive-images.js');
 require('./components/content-video-embeds.js');
+// require('./components/products.js');

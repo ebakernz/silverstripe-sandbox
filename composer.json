@@ -14,7 +14,8 @@
         "unclecheese/display-logic": "^2.0",
         "jonom/focuspoint": "^3.1",
         "embed/embed": "^3.4",
-        "jonom/silverstripe-betternavigator": "^5.2"
+        "jonom/silverstripe-betternavigator": "^5.2",
+        "swordfox/silverstripe-shopify": "1.2.6.3"
     },
     "prefer-stable": true,
     "minimum-stability": "dev",

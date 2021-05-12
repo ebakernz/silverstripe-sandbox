@@ -39,5 +39,7 @@
 		"dev": "export NODE_ENV=dev && webpack --mode development --watch",
 		"prod": "export NODE_ENV=production && webpack --mode production"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"shopify-buy": "^2.11.0"
+	}
 }

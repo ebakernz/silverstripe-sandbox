@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2ea248326d662b47dedd2340257dc00",
+    "content-hash": "355d1869d344e301e18ad3855fff29f4",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -3440,6 +3440,64 @@
                 "source": "https://github.com/swiftmailer/swiftmailer/tree/v5.4.12"
             },
             "time": "2018-07-31T09:26:32+00:00"
+        },
+        {
+            "name": "swordfox/silverstripe-shopify",
+            "version": "1.2.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swordfox/silverstripe-shopify.git",
+                "reference": "da0e8e405373e2c022096c59d3a8ef88b5d4b731"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swordfox/silverstripe-shopify/zipball/da0e8e405373e2c022096c59d3a8ef88b5d4b731",
+                "reference": "da0e8e405373e2c022096c59d3a8ef88b5d4b731",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "guzzlehttp/guzzle": "*",
+                "silverstripe/cms": "4.x",
+                "silverstripe/framework": "4.x",
+                "symbiote/silverstripe-gridfieldextensions": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "images"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Swordfox\\Shopify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Graham McLellan",
+                    "homepage": "https://www.swordfox.nz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Import Shopify products into your Silverstripe site, implements the buy button sdk to create a cart and checkout",
+            "keywords": [
+                "buybutton",
+                "shopify",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/swordfox/silverstripe-recaptchamultiple/issues",
+                "source": "https://github.com/swordfox/silverstripe-shopify/tree/1.2.6.3"
+            },
+            "time": "2021-04-14T22:06:14+00:00"
         },
         {
             "name": "symbiote/silverstripe-gridfieldextensions",
