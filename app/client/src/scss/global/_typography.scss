@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;subset=latin-ext&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@200;300;400&family=Work+Sans:wght@100;200;300&display=swap');
+
+$bodyFont: 'Work Sans';
+$headingFont: Newsreader, serif;
 
 @mixin h1-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 56px;
@@ -10,7 +13,7 @@
 }
 
 @mixin h2-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -19,16 +22,16 @@
 }
 
 @mixin h3-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: normal;
   margin: 0;
 }
 
 @mixin h4-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -37,7 +40,7 @@
 }
 
 @mixin h5-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -46,7 +49,7 @@
 }
 
 @mixin p-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -54,7 +57,7 @@
 }
 
 @mixin sub-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -62,7 +65,7 @@
 }
 
 @mixin micro-desktop {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -70,7 +73,7 @@
 }
 
 @mixin h1-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -79,7 +82,7 @@
 }
 
 @mixin h2-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
@@ -88,7 +91,7 @@
 }
 
 @mixin h3-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -97,7 +100,7 @@
 }
 
 @mixin h4-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -106,7 +109,7 @@
 }
 
 @mixin h5-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $headingFont;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -115,7 +118,7 @@
 }
 
 @mixin p-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -123,7 +126,7 @@
 }
 
 @mixin sub-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -131,7 +134,7 @@
 }
 
 @mixin micro-mobile {
-  font-family: "Work Sans", sans-serif;
+  font-family: $bodyFont;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;

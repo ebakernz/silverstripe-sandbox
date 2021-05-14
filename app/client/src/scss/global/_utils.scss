@@ -71,3 +71,34 @@
 .u-cf {
   @include clearfix();
 }
+
+
+
+/***** COLUMNS *****/
+
+.u-col-wrapper {
+  @include breakpoint(md-and-up) {
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between;
+  }
+}
+
+
+.w1x4 {
+  @include breakpoint(md-and-up) {
+    width: 25%;
+  }
+}
+
+.w1x2 {
+  @include breakpoint(md-and-up) {
+    width: 50%;
+  }
+}
+
+.w3x4 {
+  @include breakpoint(md-and-up) {
+    width: 75%;
+  }
+}

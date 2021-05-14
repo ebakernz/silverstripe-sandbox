@@ -3,26 +3,32 @@
 
 		<div class="u-content">
             
-            <div class="content-container unit size3of4 lastUnit">
-                <article>
-                    <h1>$Title</h1>
-                    <div class="content">$Content</div>
+            <% if Collections %>
+                <div class="collections">
+                    <h1>Collections</h1>
+                    <ul class="collections-list">
+                        <% loop Collections %>
+                            <li class="collections-list__item"><a href="/products/collection/$URLSegment">$Title</a></li>
+                        <% end_loop %>
+                    </ul>
+                </div>
+            <% end_if %>
 
-                    <% if $ProductsPaginated %>
-                        <section class="content center unit size1of1 lastUnit" style="display: flex; flex-wrap: wrap">
-                            <% loop $ProductsPaginated %>
-                            <% include Swordfox\\Shopify\\Product %>
-                            <% end_loop %>
-                        </section>
+            <h1>$Title</h1>
 
-                        <section class="content center unit size1of1 lastUnit">
-                            <% with $ProductsPaginated %>
-                            <% include Swordfox\\Shopify\\Pagination %>
-                            <% end_with %>
-                        </section>
-                    <% end_if %>
-                </article>
-            </div>
+            <% if $AllProducts %>
+                <section class="products__summaries">
+                    <% loop $AllProducts %>
+                        <% include Includes/ProductSummary %>
+                    <% end_loop %>
+                </section>
+
+                <section class="">
+                    <% with $AllProducts %>
+                        <% include Includes/Pagination %>
+                    <% end_with %>
+                </section>
+            <% end_if %>
 
         </div>
 

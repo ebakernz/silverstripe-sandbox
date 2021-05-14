@@ -7,3 +7,9 @@ DNADesign\Elemental\Models\BaseElement:
 Page:
   extensions:
     - Skeletor\Extensions\ElementalPageExtension
+Swordfox\Shopify\Model\Product:
+  extensions:
+    - Skeletor\Extensions\ShopifyProductExtension
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - Skeletor\Extensions\CustomLeftAndMain

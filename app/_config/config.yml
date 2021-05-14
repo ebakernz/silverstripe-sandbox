@@ -29,3 +29,9 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - "./silverstripe.log"
       - "info"
+
+# app/_config/config.yml
+SilverStripe\Admin\LeftAndMain:
+  help_links:
+    # Add a new link
+    'Shopify Orders': 'https://emmas-sandbox-store.myshopify.com/admin/orders?selectedView=all'

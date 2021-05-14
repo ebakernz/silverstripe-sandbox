@@ -6,6 +6,7 @@ Page:
     - Skeletor\Elemental\SingleImageElement
     - Skeletor\Elemental\SingleVideoElement
     - Skeletor\Elemental\EmbeddedCodeElement
+    - Skeletor\Elemental\ShopifyProductElement
   allowed_elements_sidebar:
     - DNADesign\Elemental\Models\ElementContent
 

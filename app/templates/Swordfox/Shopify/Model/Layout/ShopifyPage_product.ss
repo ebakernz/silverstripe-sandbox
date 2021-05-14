@@ -1,54 +1,53 @@
 <main class="">
 	<div class="u-container">
 
-		<div class="u-content">
+		<div class="product__view u-content u-col-wrapper">
             
-            <div class="content-container unit size3of4 lastUnit">
-                <article>
-                    <h1>$Title</h1>
-                    <section class="content unit size1of2">
-                        $Content
+            <section class="product__images u-col w1x2">
+                <% if Images.Count %>
 
-                        <p class="price">
-                            $Price.RAW
-                        </p>
-
-                        <div id="product-component" data-shopifyid="{$ShopifyID}" data-shopifytitle="$Title.XML" data-shopifyprice="$PriceOnly" data-shopifylink="$Link"></div>
-                    </section>
-
-                    <section class="content unit size1of2 lastUnit">
-                        <% if Images.Count %>
-
-                        <% with Images.Sort(Sort).First %>
-                        <div class="content unit size1of1 lastUnit">
-                            <a href="https://images.weserv.nl/?w=1000&amp;url={$Top.URLEncode($OriginalSrc)}">
-                                <img src="https://images.weserv.nl/?w=500&amp;url={$Top.URLEncode($OriginalSrc)}" alt="" width="500" />
-                            </a>
+                    <% with Images.Sort(Sort).First %>
+                        <div class="product__image-slide product__image-slide--first">
+                            <img src="https://images.weserv.nl/?w=500&amp;url={$Top.URLEncode($OriginalSrc)}" alt="" width="500" />
                         </div>
-                        <% end_with %>
+                    <% end_with %>
 
-                        <% if Images.Count > 1 %>
-                        <div class="center content unit size1of1 lastUnit">
+                    <% if Images.Count > 1 %>
+                        <div class="product__image-thumbnails">
                             <% loop Images.Sort(Sort) %>
-                            <div class="unit size1of4<% if not Modulus(4) %> lastUnit<% end_if %>">
-                                <a href="https://images.weserv.nl/?w=500&amp;url={$Top.URLEncode($OriginalSrc)}">
+                                <div class="product__image-slide">
                                     <img src="https://images.weserv.nl/?w=85&amp;h=85&amp;fit=cover&amp;url={$Top.URLEncode($OriginalSrc)}" alt="$Title">
-                                </a>
-                            </div>
+                                </div>
                             <% end_loop %>
                         </div>
-                        <% end_if %>
-                        <% end_if %>
-                    </section>
+                    <% end_if %>
 
-                    <% loop Collections %>
-                        <p><a href="/products/collection/$URLSegment">More $Title</a></p>
-                    <% end_loop %>
+                <% end_if %>
+            </section>
 
-                </article>
-            </div>
+            <section class="product__details u-col w1x2">
+
+                <h1 class="product__title">$Title</h1>
+
+                $Content
+
+                <p class="product__price">
+                    $Price.RAW
+                </p>
+
+                <div id="product-component" data-shopifyid="{$ShopifyID}" data-shopifytitle="$Title.XML" data-shopifyprice="$PriceOnly" data-shopifylink="$Link"></div>
+            </section>
 
         </div>
+
+        <% if RelatedProducts %>
+            <section class="products__summaries products__summaries--related u-content">
+                <h3>You might also like</h3>
+                <% loop RelatedProducts %>
+                    <% include Includes/ProductSummary %>
+                <% end_loop %>
+            </section>
+        <% end_if %>
 
     </div>
 
@@ -59,6 +58,7 @@
 <script type="text/javascript">
     /*<![CDATA[*/
     (function() {
+        console.log('in');
         var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
         if (window.ShopifyBuy) {
             if (window.ShopifyBuy.UI) {
@@ -79,6 +79,7 @@
         }
 
         function ShopifyBuyInit() {
+            console.log('test');
             var client = ShopifyBuy.buildClient({
                 domain: '{$shopify_domain}',
                 storefrontAccessToken: '{$storefront_access_token}',

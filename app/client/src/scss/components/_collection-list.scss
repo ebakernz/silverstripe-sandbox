@@ -1,0 +1,19 @@
+.u-content ul.collections-list {
+    padding: 0 0 2em 0;
+
+    .collections-list__item {
+        display: inline-block;
+
+        a {
+            font-size: 2rem;
+            color: colour(black);
+            text-decoration: none;
+            display: block;
+            padding: 1em 1em 1em 0;
+
+            &:hover {
+                color: colour(pink);
+            }
+        }
+    }
+}

@@ -10,3 +10,21 @@
 {
   display: none !important;
 }
+
+#Menu-ShopifyProducts .menu__icon.shopify_glyph {
+  background-image: url('/_resources/vendor/swordfox/silverstripe-shopify/images/shopify_glyph.svg');
+  height: 23px;
+}
+
+.element-editor-header__icon-container i.shopify-icon {
+  &::before {
+    content: '';
+    background-image: url('/_resources/vendor/swordfox/silverstripe-shopify/images/shopify_glyph.svg');    
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  
+}
