@@ -1,6 +1,6 @@
 <div class="e-shopify-product">
 
-    <% if $Title && $ShowTitle %><div class="u-container"><h2 class="e-single-image__title">$Title</h2></div><% end_if %>
+    <% if $Title && $ShowTitle %><div class="u-container u-content"><h3 class="e-shopify-product__title">$Title</h3></div><% end_if %>
 
     <div class="u-container <% if DisplayPageFullWidth %> u-container--full-width u-container--no-padding<% end_if %>">
         

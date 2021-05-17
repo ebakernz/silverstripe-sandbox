@@ -3,16 +3,7 @@
 
 		<div class="u-content">           
         
-            <% if Collections %>
-                <div class="collections">
-                    <h4>Collections</h4>
-                    <ul class="collections-list">
-                        <% loop Collections %>
-                            <li class="collections-list__item"><a href="$Link">$Title</a></li>
-                        <% end_loop %>
-                    </ul>
-                </div>
-            <% end_if %>
+            <% include CollectionsList Title=Collections %>
 
             <% if $AllProducts %>
                 <section class="products__summaries--grid">

@@ -1,3 +1,6 @@
+##
+# Some of these values are required by Elements
+
 Swordfox\Shopify\Client:
   api_limit: 50 # Default limit, 250 max
   api_version: '2021-01' # Default 2021-01
