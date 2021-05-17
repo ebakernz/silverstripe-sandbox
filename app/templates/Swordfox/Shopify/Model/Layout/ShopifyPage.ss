@@ -16,7 +16,7 @@
 
             <% if $AllProducts %>
                 <section class="products__summaries--grid">
-                    <% loop $AllProducts(false) %>
+                    <% loop $AllProducts %>
                         <% include Includes/ProductSummary %>
                     <% end_loop %>
                 </section>
