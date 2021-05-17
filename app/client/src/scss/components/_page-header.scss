@@ -1,0 +1,16 @@
+.page-header {
+    border-bottom: 1px solid black;
+    // padding-bottom: 3em;
+    margin-bottom: 2em;
+
+    .branding {
+        display: block;
+        max-width: 250px;
+        padding: 2em 0 1em;
+    }
+
+    .branding__image {
+        display: block;
+        max-width: 100%;
+    }
+}

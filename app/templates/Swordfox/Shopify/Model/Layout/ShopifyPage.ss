@@ -5,25 +5,23 @@
         
             <% if Collections %>
                 <div class="collections">
-                    <h1>Collections</h1>
+                    <h4>Collections</h4>
                     <ul class="collections-list">
                         <% loop Collections %>
-                            <li class="collections-list__item"><a href="/products/collection/$URLSegment">$Title</a></li>
+                            <li class="collections-list__item"><a href="$Link">$Title</a></li>
                         <% end_loop %>
                     </ul>
                 </div>
             <% end_if %>
 
-            <h1>$Title</h1>
-
             <% if $AllProducts %>
-                <section class="products__summaries">
-                    <% loop $AllProducts %>
+                <section class="products__summaries--grid">
+                    <% loop $AllProducts(false) %>
                         <% include Includes/ProductSummary %>
                     <% end_loop %>
                 </section>
-
-                <section class="">
+        
+                <section class="pagination">
                     <% with $AllProducts %>
                         <% include Includes/Pagination %>
                     <% end_with %>

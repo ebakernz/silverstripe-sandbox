@@ -3,7 +3,7 @@
 
 .c-menu__item {
   position: relative;
-  display: block;
+  display: inline-block;
 
   &--current {
     & > .c-menu__item-link {
@@ -18,8 +18,15 @@
   }
 }
 
-.c-menu__link {
+.c-menu__item-link {
+  color: colour(black);
+  display: block;
+  padding: 0 2em 1em 0;
   text-decoration: none;
+  &:hover {
+    color: colour(pink);
+    text-decoration: underline;
+  }
 }
 
 .c-menu__submenu {

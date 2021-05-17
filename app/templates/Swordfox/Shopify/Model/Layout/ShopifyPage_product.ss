@@ -41,12 +41,16 @@
         </div>
 
         <% if RelatedProducts %>
-            <section class="products__summaries products__summaries--related u-content">
-                <h3>You might also like</h3>
-                <% loop RelatedProducts %>
-                    <% include Includes/ProductSummary %>
-                <% end_loop %>
-            </section>
+            <div class="products__summaries u-content">
+                <h3 class="products__summaries-title">You might also like</h3>
+
+                <section class="products__summaries--grid products__summaries--related">                    
+                    <% loop RelatedProducts %>
+                        <% include Includes/ProductSummary %>
+                    <% end_loop %>
+                </section>
+                
+            </div>
         <% end_if %>
 
     </div>

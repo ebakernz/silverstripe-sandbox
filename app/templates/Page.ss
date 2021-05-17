@@ -2,10 +2,10 @@
 <html lang="en">
 	<% include DocumentHead %>
 	<body class="<% if $URLSegment == 'Security' %>Security<% else %>$ClassName.ShortName<% end_if %>">
-		<header class="">
+		<header class="page-header">
 			<div class="u-container">
-				<a class="" href="{$BaseURL}">
-					<img src="{$ClientAssetsPath}/images/logo.png" alt="{$SiteConfig.Title} logo" />
+				<a class="branding" href="{$BaseURL}">
+					<img class="branding__image" src="{$ClientAssetsPath}/images/psdigital-logo.png" alt="{$SiteConfig.Title} logo" />
 				</a>
 				<% include Menu %>
 			</div>

@@ -23,6 +23,7 @@
  * Any significant component that is reused throughout the site. Typically these would have
  * a matching template (ie Includes/{COMPONENT_NAME}), and js (ie js/{COMPONENT_NAME}).
  **/
+@import "components/page-header";
 @import "components/forms";
 @import "components/menu";
 @import "components/pagination";

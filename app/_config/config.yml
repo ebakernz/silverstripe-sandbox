@@ -9,13 +9,32 @@ SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
 SilverStripe\Admin\LeftAndMain:
   extra_requirements_css:
     - "app/client/dist/cms.css"
+  help_links:
+    # Add a new link
+    'Shopify Orders': 'https://emmas-sandbox-store.myshopify.com/admin/orders?selectedView=all'
 Skeletor\Extensions\SiteConfigExtension:
   noindex_domains:
     - localhost
     - .plasticstudio.co
 LeKoala\DebugBar\DebugBar:
   check_local_ip: false
-
+  
+# SilverStripe\Core\Injector\Injector:
+#   Swordfox\Shopify\Client:
+#     properties:
+#       api_key: '`Shopify_API_Key`'
+#       api_password: '`Shopify_API_Password`'
+#       storefront_access_token: '`Shopify_Storefront_Access_Token`' # for buybutton code
+#       shopify_domain: '`Shopify_Domain`' # mydomain.myshopify.com
+#       shared_secret: '`Shopify_Shared_Secret`'
+#       webhooks_shared_secret: '`Shopify_webhooks_Shared_Secret`'
+#       delete_on_shopify: false
+#       delete_on_shopify_after: '+3 days' # strtotime('+3 days')
+#       hide_out_of_stock: false
+#       hide_if_no_image: false
+#       new_based_on: 'Created' # LastEdited or ImageAdded (use with hide_if_no_image)
+#       new_timeframe: '+7 days' # strtotime('+7 days')
+#       cron_interval: '-18 hours'
 ---
 Only:
   environment: "dev"
@@ -29,9 +48,3 @@ SilverStripe\Core\Injector\Injector:
     constructor:
       - "./silverstripe.log"
       - "info"
-
-# app/_config/config.yml
-SilverStripe\Admin\LeftAndMain:
-  help_links:
-    # Add a new link
-    'Shopify Orders': 'https://emmas-sandbox-store.myshopify.com/admin/orders?selectedView=all'
