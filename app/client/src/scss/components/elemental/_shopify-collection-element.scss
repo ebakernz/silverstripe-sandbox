@@ -1,0 +1,36 @@
+<div class="e-shopify-product">
+
+    <% if $Title && $ShowTitle %><div class="u-container u-content"><h3 class="e-shopify-product__title">$Title</h3></div><% end_if %>
+
+    <div class="u-container <% if DisplayPageFullWidth %> u-container--full-width u-container--no-padding<% end_if %>">
+        
+        <% loop Product %>
+
+            <div class="product__view u-content u-col-wrapper">
+            
+                <section class="product__images u-col w1x2">
+                    <% if Images.Count %>    
+                        <% with Images.Sort(Sort).First %>
+                            <div class="product__image-slide product__image-slide--first">
+                                <img src="https://images.weserv.nl/?w=500&amp;url={$Top.URLEncode($OriginalSrc)}" alt="" width="500" />
+                            </div>
+                        <% end_with %>    
+                    <% end_if %>
+                </section>
+    
+                <section class="product__details u-col w1x2">    
+                    <h1 class="product__title">$Title</h1>
+
+                    <p class="product__price">
+                        $Price.RAW
+                    </p>
+    
+                    <div id="product-component" data-shopifyid="{$ShopifyID}" data-shopifytitle="$Title.XML" data-shopifyprice="$PriceOnly" data-shopifylink="$Link"></div>
+                </section>
+    
+            </div>
+
+        <% end_loop %>
+
+    </div>
+</div>

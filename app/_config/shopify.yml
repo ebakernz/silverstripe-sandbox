@@ -3,7 +3,7 @@
 
 Swordfox\Shopify\Client:
   api_limit: 50 # Default limit, 250 max
-  api_version: '2021-01' # Default 2021-01
+  api_version: '2021-04' # Default 2021-01
   api_key: '26de995a197e628c9876c5309c35e1d9'
   api_password: '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'
   storefront_access_token: 'bac10ed49f115f9ef2900fd51d77783f' # for buybutton code

@@ -36,8 +36,34 @@
                 </p>
 
                 <div id="product-component" data-shopifyid="{$ShopifyID}" data-shopifytitle="$Title.XML" data-shopifyprice="$PriceOnly" data-shopifylink="$Link"></div>
+
+                <div class="product__tags">
+
+                    <% if ProductType || Collections || Tags %>
+                        <p><strong>Product Information:</strong></p>
+                    
+                        <% if ProductType %>
+                            <p>Product Type: $ProductType</p>
+                        <% end_if %>
+                    
+                        <% if Collections %>
+                            <p>Collections: <% loop Collections %>$Title<% if not Last %>, <% end_if %><% end_loop %></p> 
+                        <% end_if %>
+
+                        <% if Tags %>
+                            <p>Tags: <% loop Tags %>$Title<% if not Last %>, <% end_if %><% end_loop %></p>
+                        <% end_if %>
+                        
+                        <% if ProductsWithTag %>
+                            <p>Products with same tag: <% loop ProductsWithTag %><a href="$Link">$Title</a><% if not Last %>, <% end_if %><% end_loop %></p>
+                        <% end_if %>
+
+                    <% end_if %>
+                    
+                </div>
             </section>
 
+            
         </div>
 
         <% if RelatedProducts %>
@@ -62,7 +88,6 @@
 <script type="text/javascript">
     /*<![CDATA[*/
     (function() {
-        console.log('in');
         var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
         if (window.ShopifyBuy) {
             if (window.ShopifyBuy.UI) {
@@ -83,7 +108,6 @@
         }
 
         function ShopifyBuyInit() {
-            console.log('test');
             var client = ShopifyBuy.buildClient({
                 domain: '{$shopify_domain}',
                 storefrontAccessToken: '{$storefront_access_token}',
