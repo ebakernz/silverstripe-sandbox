@@ -47,7 +47,7 @@
                         <% end_if %>
                     
                         <% if Collections %>
-                            <p>Collections: <% loop Collections %>$Title<% if not Last %>, <% end_if %><% end_loop %></p> 
+                            <p>Collections: <% loop Collections %><a href="$Link">$Title</a><% if not Last %>, <% end_if %><% end_loop %></p> 
                         <% end_if %>
 
                         <% if Tags %>

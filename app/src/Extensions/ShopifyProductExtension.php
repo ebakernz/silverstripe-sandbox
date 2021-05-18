@@ -16,7 +16,7 @@ class ShopifyProductExtension extends DataExtension {
         if($this->owner->Collections()->exists()) {
             $collectionsIDs = implode(', ', $this->owner->Collections()->column('ID'));
             $related = Product::get()->filter(['Collections.ID'=> [$collectionsIDs]])->exclude('ID', $this->owner->ID);
-            if($related) return $related->limit(4);
+            if($related) return $related->limit(3);
         }
     }
 
