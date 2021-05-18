@@ -34,9 +34,9 @@ class ShopifyProductElement extends BaseElement
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->removeByName('Products');
+        $fields->removeByName('ProductID');
 
-        $fields->addFieldToTab('Root.Main', DropdownField::create('Product', 'Product', Product::get()->map('ID', 'Title'))->setEmptyString('Select product'));
+        $fields->addFieldToTab('Root.Main', DropdownField::create('ProductID', 'Product', Product::get()->map('ID', 'Title'))->setEmptyString('Select product'));
         $fields->addFieldToTab('Root.Main', CheckboxField::create('DisplayPageFullWidth', 'Display Page Full Width?'));
         
         return $fields;
